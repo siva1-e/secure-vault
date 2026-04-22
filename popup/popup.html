@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Password Manager</title>
+<link rel="stylesheet" href="popup.css">
+<script src="popup.js" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+  <h3>SAVE CREDENTIALS</h3>
+
+  <div class="status" id="guide">
+    <div class="row">1) Register in extension</div>
+    <div class="row">2) Login once in extension (this device remembers you)</div>
+    <div class="row">3) Save captured credentials (local, optional cloud hash)</div>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <label>
+    <input id="cloudSaveToggle" type="checkbox">
+    Also save hashed copy to cloud
+  </label>
+
+  <button id="yesBtn">YES (SAVE LOCALLY)</button>
+  <button id="noBtn">NO (DISCARD)</button>
+
+  <div class="status" id="authStatus"></div>
+  <div class="status" id="detailStatus"></div>
+
+  <div id="authWrapper" style="margin-top: 20px; border-top: 1px solid #444; pt: 15px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+      <div class="section-title" id="authSectionTitle" style="margin:0;">REGISTRATION (REQUIRED)</div>
+      <button id="toggleAuthBtn" style="background:none; border:none; color:#667eea; cursor:pointer; text-decoration:underline; font-size:11px;">
+        Already registered? Login
+      </button>
+    </div>
+
+    <div id="registerSection">
+      <div class="status" id="registerStatus"></div>
+
+      <label>Register Username</label>
+      <input id="regUsername" placeholder="username">
+
+      <label>Register Email</label>
+      <input id="regEmail" placeholder="email">
+
+      <label>Confirm Email</label>
+      <input id="regEmail2" placeholder="confirm email">
+
+      <label>Register Master Password</label>
+      <input id="regMasterPassword" type="password" placeholder="master password">
+
+      <label>Confirm Master Password</label>
+      <input id="regMasterPassword2" type="password" placeholder="confirm master password">
+
+      <label>Safety Question</label>
+      <input id="recoveryQuestion" placeholder="safety question">
+
+      <label>Safety Answer</label>
+      <input id="recoveryAnswer" type="password" placeholder="safety answer">
+
+      <button id="registerBtn">REGISTER</button>
+    </div>
+
+    <div id="loginSection" style="display: none;">
+      <label>Username or Email</label>
+      <input id="identifier" placeholder="username or email">
+
+      <label>Master Password</label>
+      <input id="masterPassword" type="password" placeholder="master password">
+
+      <button id="loginBtn">UNLOCK</button>
+      <button id="logoutBtn">LOCK</button>
+
+      <div class="section-title" style="margin-top:10px">UNLOCK VIA SSO CODE</div>
+      <label>SSO Code</label>
+      <input id="ssoCode" placeholder="8-char code">
+      <button id="ssoUnlockBtn">UNLOCK WITH CODE</button>
+    </div>
+  </div>
+  <div id="recoverySection">
+    <div class="section-title">RECOVER ACCOUNT (EMAIL + SAFETY ANSWER)</div>
+    <div class="status" id="recoveryStatus"></div>
+
+    <div id="recoveryStep1">
+      <label>Username or Email</label>
+      <input id="recoveryIdentifier" placeholder="username or email">
+      <label>Registered Email</label>
+      <input id="recoveryEmail" placeholder="email used at registration">
+      <button id="recoveryStartBtn">GET SAFETY QUESTION</button>
+    </div>
+
+    <div id="recoveryStep2" style="display:none;">
+      <div class="status" id="recoveryQuestionDisplay" style="margin-bottom: 10px; background: #333; padding: 10px; border-radius: 4px;"></div>
+      <label>Safety Answer</label>
+      <input id="recoveryAnswerInput" type="password" placeholder="safety answer">
+      <button id="recoveryVerifyBtn">VERIFY & REVEAL</button>
+    </div>
+
+    <div id="revealedPasswordsArea" style="display:none; margin-top:10px; border-top:1px solid #444; padding-top:10px;">
+      </div>
+    <div id="recoveryStep3" style="display:none; margin-top: 15px; border-top: 1px solid #444; padding-top: 15px;">
+      <div class="section-title" style="color: #667eea; text-align: center;">RESET MASTER PASSWORD</div>
+      
+      <label>NEW MASTER PASSWORD</label>
+      <input type="password" id="newMasterPassword" placeholder="Enter new password">
+
+      <label>CONFIRM NEW PASSWORD</label>
+      <input type="password" id="confirmNewMasterPassword" placeholder="Confirm new password">
+
+      <button id="finalResetBtn" style="background: #e53e3e; color: white; width: 100%; margin-top: 10px;">
+        UPDATE PASSWORD & LOGIN
+      </button>
+    </div> 
+  </div>
+
+  <div id="vaultSection">
+    <div class="section-title">LOCAL VAULT (THIS DEVICE)</div>
+    <button id="vaultRefreshBtn">REFRESH VAULT LIST</button>
+    <div class="status" id="vaultStatus"></div>
+    <div id="vaultList"></div>
+  </div>
+
+  <div id="vaultHashSection">
+    <div class="section-title">LOCAL HASHED VAULT (THIS DEVICE)</div>
+    <button id="vaultHashRefreshBtn">REFRESH HASHED LIST</button>
+    <div class="status" id="vaultHashStatus"></div>
+    <div id="vaultHashList"></div>
+  </div>
+
+  <div id="cloudVaultSection">
+    <div class="section-title">CLOUD HASHED VAULT (ACCOUNT)</div>
+    <button id="cloudVaultRefreshBtn">REFRESH CLOUD LIST</button>
+    <div class="status" id="cloudVaultStatus"></div>
+    <div id="cloudVaultList"></div>
+  </div>
+</div>
+
+</body>
+</html>

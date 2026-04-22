@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: securevault
+    runtime: node
+    rootDir: cpu
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: DB_NAME
+        value: siva_sankar
+      - key: PORT
+        value: 8080
+      - key: PUBLIC_BASE_URL
+        sync: false

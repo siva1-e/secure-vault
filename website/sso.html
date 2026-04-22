@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Manager SSO</title>
+  <link rel="stylesheet" href="sso-style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>SSO Login</h1>
+
+    <label>CPU Base URL</label>
+    <input id="cpuBaseUrl" placeholder="https://your-cpu-domain" />
+
+    <label>Username / Email</label>
+    <input id="identifier" placeholder="username or email" />
+
+    <label>Master Password</label>
+    <input id="masterPassword" type="password" placeholder="master password" />
+
+    <button id="loginBtn">Login</button>
+
+    <div id="status" class="status"></div>
+
+    <div class="divider"></div>
+
+    <h2>SSO Code</h2>
+    <div id="code" class="code">—</div>
+    <div class="hint">Enter this code in the extension to unlock.</div>
+  </div>
+
+  <script src="sso-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "password-manager",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "cpu:install": "npm --prefix cpu install",
+    "start": "npm --prefix cpu start",
+    "cpu:start": "npm --prefix cpu start"
+  },
+  "dependencies": {
+    "mongodb": "^7.0.0",
+    "node": "^25.5.0",
+    "puppeteer": "^24.40.0",
+    "server.js": "^1.0.0"
+  }
+}

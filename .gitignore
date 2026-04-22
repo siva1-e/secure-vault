@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+cpu/.env
+cpu/.env.*
+!cpu/.env.example
+cpu/New Text Document.env
+cpu/mongodb-compass-config.txt
+node_modules/
+
+__pycache__/
+*.pyc
+.venv/
+venv/

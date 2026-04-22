@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Secure Password Manager",
+  "version": "0.1.0",
+  "description": "Zero-plaintext Firefox password manager (demo mode enabled)",
+
+"permissions": [
+    "storage",
+    "unlimitedStorage",
+    "activeTab",
+    "webRequest",
+    "*://localhost/*",
+    "http://*/*",
+    "https://*/*"
+],
+
+  "background": {
+    "scripts": [
+      "background/demo-log.js",
+      "crypto/crypto.js",
+      "background/background.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Secure Password Manager",
+    "default_icon": {
+      "48": "icons/icon-64.png",
+      "64": "icons/icon-64.png",
+      "96": "icons/icon-64.png",
+      "128": "icons/icon-64.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>", "https://*/*", "http://*/*"],
+      "js": ["content/content-improved.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "password-manager@secure.local",
+      "strict_min_version": "78.0"
+    }
+  },
+
+  "icons": {
+    "48": "icons/icon-64.png",
+    "64": "icons/icon-64.png",
+    "96": "icons/icon-64.png",
+    "128": "icons/icon-64.png"
+  }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureVault — Zero-Plaintext Password Manager</title>
+  <meta name="description" content="SecureVault is a zero-plaintext Firefox password manager extension. Your credentials are hashed with SHA-256 — the server never stores your passwords in plaintext." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="security.html" class="nav-link">Security</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="sso.html" class="nav-link nav-link-sso">SSO Portal</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title" id="hero-title">
+        Your passwords.<br />
+        <span class="hero-gradient-text">Zero plaintext. Ever.</span>
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        SecureVault hashes every credential with <strong>SHA-256</strong> before it ever reaches the server. No plaintext passwords are stored — not even once.
+      </p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="download.html" class="btn btn-primary" id="cta-download">
+          <span class="btn-glow"></span>
+          ⬇ Download Extension
+        </a>
+        <a href="how-it-works.html" class="btn btn-secondary" id="cta-learn">
+          See How It Works
+        </a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat">
+          <span class="stat-value">SHA-256</span>
+          <span class="stat-label">Hashing</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">Secure</span>
+          <span class="stat-label">Backend Processing</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">Zero</span>
+          <span class="stat-label">Plaintext Storage</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" id="hero-visual">
+      <div class="shield-container">
+        <div class="shield-glow"></div>
+        <div class="shield">
+          <div class="shield-inner">
+            <svg viewBox="0 0 100 120" class="shield-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#ff1a1a;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#8b0000;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path d="M50 5 L95 25 L95 60 Q95 95 50 115 Q5 95 5 60 L5 25 Z" 
+                    fill="url(#shieldGrad)" stroke="#ff4444" stroke-width="1.5" opacity="0.9"/>
+              <path d="M50 15 L85 32 L85 58 Q85 88 50 105 Q15 88 15 58 L15 32 Z" 
+                    fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+              <!-- Keyhole -->
+              <circle cx="50" cy="52" r="10" fill="rgba(0,0,0,0.6)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <rect x="46" y="58" width="8" height="18" rx="4" fill="rgba(0,0,0,0.6)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            </svg>
+          </div>
+        </div>
+        <div class="shield-particles">
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+          <span class="particle p4"></span>
+          <span class="particle p5"></span>
+          <span class="particle p6"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+          <p class="footer-tagline">Zero-plaintext password management for the security-conscious.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="features.html">Features</a>
+            <a href="security.html">Security</a>
+            <a href="download.html">Download</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="sso.html">SSO Portal</a>
+            <a href="how-it-works.html">Documentation</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SecureVault. All rights reserved. Built with 🔐 by the team.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

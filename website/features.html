@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — SecureVault</title>
+  <meta name="description" content="Explore SecureVault's powerful features: SHA-256 hashing, smart auto-fill, secure vault, account recovery, SSO portal, and cloud sync." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html" class="nav-link nav-link-active">Features</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="security.html" class="nav-link">Security</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="sso.html" class="nav-link nav-link-sso">SSO Portal</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ PAGE HEADER ═══════════ -->
+  <section class="page-hero" id="page-hero">
+    <div class="page-hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="section-container">
+      <div class="page-hero-content">
+        <span class="section-tag">CAPABILITIES</span>
+        <h1 class="page-hero-title">Everything you need to stay <span class="text-gradient">secure</span></h1>
+        <p class="page-hero-subtitle">Built from the ground up with a zero-trust architecture. Every feature is designed to keep your credentials completely private.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEATURES ═══════════ -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="features-grid">
+        <div class="feature-card" id="feature-hashing">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🔐</div>
+          </div>
+          <h3 class="feature-title">SHA-256 Hashing</h3>
+          <p class="feature-desc">Every password is hashed with SHA-256 combined with a unique per-user salt before being stored. No plaintext passwords ever reach the database — not even once.</p>
+        </div>
+        <div class="feature-card" id="feature-autofill">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">✨</div>
+          </div>
+          <h3 class="feature-title">Smart Auto-Fill</h3>
+          <p class="feature-desc">Content scripts intelligently detect login forms and auto-fill your saved credentials. Captures new passwords on form submission with a sleek in-page notification.</p>
+        </div>
+        <div class="feature-card" id="feature-vault">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🗄️</div>
+          </div>
+          <h3 class="feature-title">Secure Vault</h3>
+          <p class="feature-desc">Browse, reveal, and manage your saved credentials from the popup vault. Each entry is securely stored and retrieved through the protected backend.</p>
+        </div>
+        <div class="feature-card" id="feature-recovery">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🔑</div>
+          </div>
+          <h3 class="feature-title">Account Recovery</h3>
+          <p class="feature-desc">Forgot your master password? Recover access through your encrypted safety question and answer. Reset your master password with a time-limited recovery token.</p>
+        </div>
+        <div class="feature-card" id="feature-sso">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🌐</div>
+          </div>
+          <h3 class="feature-title">SSO Web Portal</h3>
+          <p class="feature-desc">Log in from any device via the web portal to issue a single-sign-on code. Enter the code in the extension to unlock your vault without typing your master password.</p>
+        </div>
+        <div class="feature-card" id="feature-cloud">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">☁️</div>
+          </div>
+          <h3 class="feature-title">Cloud Sync</h3>
+          <p class="feature-desc">Optionally sync hashed copies of your vault entries to MongoDB Atlas. Your credentials are always hashed — the cloud only stores non-reversible data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+          <p class="footer-tagline">Zero-plaintext password management for the security-conscious.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="features.html">Features</a>
+            <a href="security.html">Security</a>
+            <a href="download.html">Download</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="sso.html">SSO Portal</a>
+            <a href="how-it-works.html">Documentation</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SecureVault. All rights reserved. Built with 🔐 by the team.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

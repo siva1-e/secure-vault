@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download — SecureVault</title>
+  <meta name="description" content="Download SecureVault, the zero-plaintext Firefox password manager extension. Get started in minutes with SHA-256 hashing and secure backend processing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="security.html" class="nav-link">Security</a>
+        <a href="download.html" class="nav-link nav-link-active">Download</a>
+        <a href="sso.html" class="nav-link nav-link-sso">SSO Portal</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ PAGE HEADER ═══════════ -->
+  <section class="page-hero" id="page-hero">
+    <div class="page-hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="section-container">
+      <div class="page-hero-content">
+        <span class="section-tag">GET STARTED</span>
+        <h1 class="page-hero-title">Install <span class="text-gradient">SecureVault</span> Today</h1>
+        <p class="page-hero-subtitle">Install SecureVault as a Firefox extension to start protecting your credentials with zero-plaintext security.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ DOWNLOAD ═══════════ -->
+  <section class="download" id="download">
+    <div class="section-container">
+      <div class="download-card" id="download-card">
+        <div class="download-glow"></div>
+        <div class="download-content">
+          <h2 class="download-title">Installation Guide</h2>
+          <div class="install-steps">
+            <div class="install-step">
+              <span class="install-num">1</span>
+              <div>
+                <strong>Open Firefox Developer Tools</strong>
+                <p>Navigate to <code>about:debugging#/runtime/this-firefox</code></p>
+              </div>
+            </div>
+            <div class="install-step">
+              <span class="install-num">2</span>
+              <div>
+                <strong>Load Temporary Add-on</strong>
+                <p>Click "Load Temporary Add-on" and select the <code>manifest.json</code> file</p>
+              </div>
+            </div>
+            <div class="install-step">
+              <span class="install-num">3</span>
+              <div>
+                <strong>Start the Backend</strong>
+                <p>Run <code>npm start</code> in the project root to start the CPU server on port 8080</p>
+              </div>
+            </div>
+          </div>
+          <div class="download-actions">
+            <a href="securevault-extension.zip" download class="btn btn-primary" id="btn-github">
+              <span class="btn-glow"></span>
+              ⬇ Download Extension (.zip)
+            </a>
+            <a href="sso.html" class="btn btn-secondary" id="btn-sso">
+              Open SSO Portal
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TECH STACK ═══════════ -->
+  <section class="tech-stack" id="tech-stack">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">BUILT WITH</span>
+        <h2 class="section-title">Modern <span class="text-gradient">technology</span> stack</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item" id="tech-firefox">
+          <div class="tech-icon">🦊</div>
+          <span>Firefox WebExtension</span>
+        </div>
+        <div class="tech-item" id="tech-webcrypto">
+          <div class="tech-icon">🔐</div>
+          <span>Web Crypto API</span>
+        </div>
+        <div class="tech-item" id="tech-nodejs">
+          <div class="tech-icon">💚</div>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-item" id="tech-mongodb">
+          <div class="tech-icon">🍃</div>
+          <span>MongoDB Atlas</span>
+        </div>
+        <div class="tech-item" id="tech-sha256">
+          <div class="tech-icon">🛡️</div>
+          <span>SHA-256 Hashing</span>
+        </div>
+        <div class="tech-item" id="tech-backend">
+          <div class="tech-icon">🔒</div>
+          <span>Secure Backend</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+          <p class="footer-tagline">Zero-plaintext password management for the security-conscious.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="features.html">Features</a>
+            <a href="security.html">Security</a>
+            <a href="download.html">Download</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="sso.html">SSO Portal</a>
+            <a href="how-it-works.html">Documentation</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SecureVault. All rights reserved. Built with 🔐 by the team.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security — SecureVault</title>
+  <meta name="description" content="Explore SecureVault's zero-knowledge security architecture: SHA-256 hashing, secure backend processing, no plaintext storage, and ephemeral sessions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="security.html" class="nav-link nav-link-active">Security</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="sso.html" class="nav-link nav-link-sso">SSO Portal</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ PAGE HEADER ═══════════ -->
+  <section class="page-hero" id="page-hero">
+    <div class="page-hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="section-container">
+      <div class="page-hero-content">
+        <span class="section-tag">ARCHITECTURE</span>
+        <h1 class="page-hero-title">Security that's <span class="text-gradient">provable</span></h1>
+        <p class="page-hero-subtitle">Every layer of SecureVault is designed around a single principle: no plaintext is ever stored or transmitted. Your data is always hashed before it reaches the server.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECURITY ═══════════ -->
+  <section class="security" id="security">
+    <div class="section-container">
+      <div class="security-grid">
+        <div class="security-card security-card-main" id="sec-hashing">
+          <div class="security-card-header">
+            <div class="security-badge">HASHING PIPELINE</div>
+          </div>
+          <div class="crypto-flow">
+            <div class="crypto-step">
+              <div class="crypto-label">User Password</div>
+              <div class="crypto-arrow">↓</div>
+            </div>
+            <div class="crypto-step">
+              <div class="crypto-label">+ Salt (unique per user)</div>
+              <div class="crypto-arrow">↓</div>
+            </div>
+            <div class="crypto-step highlight">
+              <div class="crypto-label">SHA-256 Hashing</div>
+              <div class="crypto-arrow">↓</div>
+            </div>
+            <div class="crypto-step">
+              <div class="crypto-label">Hashed Output</div>
+              <div class="crypto-arrow">↓</div>
+            </div>
+            <div class="crypto-step highlight">
+              <div class="crypto-label">Stored Securely (no plaintext)</div>
+            </div>
+          </div>
+        </div>
+        <div class="security-card" id="sec-zero-plaintext">
+          <div class="security-icon">🚫</div>
+          <h3>No Plaintext Storage</h3>
+          <p>Passwords are never stored in plaintext. Every credential is hashed with SHA-256 before it reaches the database — even a full breach reveals nothing usable.</p>
+        </div>
+        <div class="security-card" id="sec-backend">
+          <div class="security-icon">🔒</div>
+          <h3>Secure Backend Processing</h3>
+          <p>All sensitive operations happen on the secured backend. Data is validated, hashed, and stored through protected API endpoints with strict input sanitization.</p>
+        </div>
+        <div class="security-card" id="sec-blind-index">
+          <div class="security-icon">🔍</div>
+          <h3>Blind Index Lookup</h3>
+          <p>Account lookups use SHA-256 blind indices — the server can find your account without ever seeing your actual email address or username in plaintext.</p>
+        </div>
+        <div class="security-card" id="sec-session">
+          <div class="security-icon">⏱️</div>
+          <h3>Ephemeral Sessions</h3>
+          <p>Session tokens are hashed and have a strict 6-hour expiry. Your credentials exist in memory only during an active session — lock your vault anytime with one click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">Secure<span class="logo-accent">Vault</span></span>
+          <p class="footer-tagline">Zero-plaintext password management for the security-conscious.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="features.html">Features</a>
+            <a href="security.html">Security</a>
+            <a href="download.html">Download</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="sso.html">SSO Portal</a>
+            <a href="how-it-works.html">Documentation</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SecureVault. All rights reserved. Built with 🔐 by the team.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

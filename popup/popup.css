@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  width: 420px;
+  min-height: 460px;
+  background: #050505;
+  color: #ffffff;
+  font-family: monospace;
+}
+
+.container {
+  padding: 20px;
+  border: 2px solid #b30000;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(179, 0, 0, 0.65);
+  background: #080808;
+}
+
+h3 {
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+input:not([type="checkbox"]) {
+  width: 85%;
+  padding: 12px;
+  margin: 8px auto 16px;
+  background: #0b0b0b;
+  border: 1.5px solid #b30000;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  display: block;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #0b0b0b;
+  border: 1.5px solid #b30000;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background: #b30000;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.status {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed #333;
+  font-size: 13px;
+}
+
+.pending {
+  color: #ffaa00;
+}
+
+.success {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.row {
+  margin-bottom: 6px;
+}
+
+.mask {
+  letter-spacing: 2px;
+}
+
+.section-title {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed #333;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#vaultList {
+  margin-top: 10px;
+}
+
+#vaultHashList {
+  margin-top: 10px;
+}
+
+#cloudVaultList {
+  margin-top: 10px;
+}
+
+.vault-item {
+  border: 1px solid #2a2a2a;
+  background: #0b0b0b;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.muted {
+  opacity: 0.8;
+  font-size: 12px;
+}
