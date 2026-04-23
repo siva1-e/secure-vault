@@ -7,10 +7,12 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "dotenv": "^16.4.5",
     "mongodb": "^6.3.0",
-    "nodemailer": "^6.9.8",
-    "password-manager": "file:.."
+    "nodemailer": "^6.9.8"
   }
 }

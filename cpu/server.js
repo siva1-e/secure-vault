@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 // ===============================
 // Phase-1 First Internal Demo Mode
 // ===============================
-const DEMO_MODE = true;   // 🔴 REQUIRED
+const DEMO_MODE = process.env.DEMO_MODE !== "false";   // Set DEMO_MODE=false in env for real DB
 
 const PORT = Number(process.env.PORT || 8080);
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -56,7 +56,7 @@ async function sendEmail(to, subject, text) {
     await mailer.sendMail({ from: EMAIL_FROM, to, subject, text });
 }
 
-if (!MONGODB_URI) throw new Error("Missing MONGODB_URI env var");
+if (!DEMO_MODE && !MONGODB_URI) throw new Error("Missing MONGODB_URI env var");
 
 // --- Sanitizers for Encrypted Metadata ---
 function sanitizeMetadata(s) {
